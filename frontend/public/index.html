@@ -184,7 +184,7 @@
             // Fetch users
             const fetchUsers = () => {
                 const url =
-                    `http://localhost:3001/api/users?page=${page}&limit=${limit}&search=${search}`;
+                    `https://ex3-it4409.onrender.com/api/users?page=${page}&limit=${limit}&search=${search}`;
 
                 fetch(url)
                     .then(async (res) => {
@@ -205,7 +205,7 @@
             };
 
             const deleteUser = (id) => {
-                fetch(`http://localhost:3001/api/users/${id}`, {
+                fetch(`https://ex3-it4409.onrender.com/api/users/${id}`, {
                     method: "DELETE"
                 })
                     .then(async (res) => {
@@ -410,8 +410,8 @@
             const handleSubmit = () => {
                 if (!validate()) return;
                 const url = user
-                    ? `http://localhost:3001/api/users/${user._id}`
-                    : `http://localhost:3001/api/users`;
+                    ? `https://ex3-it4409.onrender.com/api/users/${user._id}`
+                    : `https://ex3-it4409.onrender.com/api/users`;
 
                 const method = user ? "PUT" : "POST";
 
